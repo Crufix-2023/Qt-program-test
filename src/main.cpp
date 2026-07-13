@@ -2,6 +2,8 @@
 
 int main()
 {
-    std::cout << "Hello, Fedora!\n";
+    int a = 0;
+    std::cin >> a;
+    std::cout << a << std::endl;
     return 0;
 }

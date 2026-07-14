@@ -1,13 +1,16 @@
 #include <QApplication>
-#include <QWidget>
-#include <QLabel>
+#include <iostream>
+#include "mainwindow.h"
+
+using namespace std;
+
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-    QWidget window;
-    QLabel label("Hello, Qt!");
-    label.setParent(&window);
-    window.show();
+
+    MainWindow w;
+    w.show();
+
     return app.exec();
 }

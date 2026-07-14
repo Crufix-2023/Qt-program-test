@@ -1,9 +1,13 @@
-#include <iostream>
+#include <QApplication>
+#include <QWidget>
+#include <QLabel>
 
-int main()
+int main(int argc, char *argv[])
 {
-    int a = 0;
-    std::cin >> a;
-    std::cout << a << std::endl;
-    return 0;
+    QApplication app(argc, argv);
+    QWidget window;
+    QLabel label("Hello, Qt!");
+    label.setParent(&window);
+    window.show();
+    return app.exec();
 }

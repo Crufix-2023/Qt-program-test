@@ -2,22 +2,13 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build C++",
+            "label": "Build Qt C++",
             "type": "shell",
-            "command": "g++",
-            "args": [
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
-            ],
+            "command": "cmake -B build && cmake --build build",
             "group": {
                 "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": [
-                "$gcc"
-            ]
+                "isDefault": false
+            }
         }
     ]
 }
